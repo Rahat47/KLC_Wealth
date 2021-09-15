@@ -11,4 +11,8 @@ export default [
     path: 'features',
     label: 'Features',
   },
+  {
+    path: 'login',
+    label: 'Login',
+  }
 ];

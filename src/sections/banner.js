@@ -13,6 +13,7 @@ import {
 import Input from "components/input";
 import flyer from "assets/images/kcl-wealth-flyer.jpg";
 import { rgba } from "polished";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Banner = () => {
     return (
@@ -20,26 +21,41 @@ const Banner = () => {
             <Container>
                 <Box sx={styles.contentWrapper}>
                     <Box sx={styles.content}>
-                        <Heading as="h1">KCL WEALTH</Heading>
-                        <Text as="p">
-                            DECENTRALIZED CROWD FUNDING PLATFORM ON KUCOIN
-                            COMMUNITY CHAIN
-                        </Text>
-                        <Box sx={styles.subscribe}>
-                            <Label htmlFor="email" variant="styles.srOnly">
-                                Email
-                            </Label>
-                            <Input
-                                id="email"
-                                type="email"
-                                placeholder="Enter Email address"
-                            />
-                            <Button variant="primary">Subscribe</Button>
+                        <ScrollAnimation
+                            animateIn="animate__bounceInLeft"
+                            animateOut="animate__bounceOutDown"
+                        >
+                            <Heading as="h1">KCL WEALTH</Heading>
+                            <Text as="p">
+                                DECENTRALIZED CROWD FUNDING PLATFORM ON KUCOIN
+                                COMMUNITY CHAIN
+                            </Text>
+                        </ScrollAnimation>
+                        <ScrollAnimation
+                            animateIn="animate__bounceInLeft"
+                            animateOut="animate__bounceOutDown"
+                        >
+                            <Box sx={styles.subscribe}>
+                                <Label htmlFor="email" variant="styles.srOnly">
+                                    Email
+                                </Label>
+                                <Input
+                                    id="email"
+                                    type="email"
+                                    placeholder="Enter Email address"
+                                />
+                                <Button variant="primary">Subscribe</Button>
+                            </Box>
+                        </ScrollAnimation>
+                    </Box>
+                    <ScrollAnimation
+                        animateIn="animate__zoomInRight"
+                        animateOut="animate__zoomOutLeft"
+                    >
+                        <Box as="figure" sx={styles.illustration}>
+                            <Image src={flyer} alt="banner" />
                         </Box>
-                    </Box>
-                    <Box as="figure" sx={styles.illustration}>
-                        <Image src={flyer} alt="banner" />
-                    </Box>
+                    </ScrollAnimation>
                 </Box>
             </Container>
         </Box>

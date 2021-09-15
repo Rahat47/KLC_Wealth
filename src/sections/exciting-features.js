@@ -4,6 +4,8 @@ import { jsx, Box, Container, Image } from "theme-ui";
 import SectionHeading from "components/section-heading";
 import Accordion from "components/accordion/accordion";
 import workHard from "assets/images/work-hard.png";
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 const data = [
     {
@@ -88,17 +90,21 @@ const ExcitingFeatures = () => {
         <Box as="section" variant="section.excitingFeatures">
             <Container>
                 <Box sx={styles.contentWrapper}>
-                    <Box sx={styles.illustration}>
-                        <Image src={workHard} alt="feature" />
-                    </Box>
+                    <ScrollAnimation animateIn="animate__slideInLeft" animateOut="animate__slideOutRight">
+                        <Box sx={styles.illustration}>
+                            <Image src={workHard} alt="feature" />
+                        </Box>
+                    </ScrollAnimation>
                     <Box sx={styles.rightContent}>
                         <SectionHeading
                             sx={styles.heading}
                             title="Learn how our services work."
                         />
-                        <Box sx={styles.accordionGroup}>
-                            <Accordion items={data} />
-                        </Box>
+                        <ScrollAnimation animateIn="animate__slideInRight" animateOut="animate__slideOutRight">
+                            <Box sx={styles.accordionGroup}>
+                                <Accordion items={data} />
+                            </Box>
+                        </ScrollAnimation>
                     </Box>
                 </Box>
             </Container>

@@ -6,6 +6,8 @@ import { rgba } from 'polished';
 import SectionHeading from 'components/section-heading';
 import Input from 'components/input';
 import illustration from 'assets/images/subscribe-bg.png';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 const SubscribeUs = () => {
   const [checked, setChecked] = useState(false);
@@ -29,29 +31,33 @@ const SubscribeUs = () => {
             description="We have more than thousand of creative entrepreneurs and stat joining our business"
           />
           <Box as="form" sx={styles.subscribe} onSubmit={handleSubmit}>
-            <Flex sx={styles.formGroup}>
-              <Label htmlFor="subs-email" variant="styles.srOnly">
-                Email
-              </Label>
-              <Input
-                id="subs-email"
-                type="email"
-                className="email-input"
-                placeholder="Enter Email address"
-              />
-              <Button variant="primary">Subscribe</Button>
-            </Flex>
-            <Box sx={styles.checkbox}>
-              <Label htmlFor="no_spam" className={checked ? 'checked' : ''}>
-                <Checkbox
-                  id="no_spam"
-                  onChange={handleCheckbox}
-                  defaultChecked={checked}
+            <ScrollAnimation animateIn="animate__backInRight" animateOut="animate__backOutLeft">
+              <Flex sx={styles.formGroup}>
+                <Label htmlFor="subs-email" variant="styles.srOnly">
+                  Email
+                </Label>
+                <Input
+                  id="subs-email"
+                  type="email"
+                  className="email-input"
+                  placeholder="Enter Email address"
                 />
-                Don’t provide any promotional message.
-              </Label>
+                <Button variant="primary">Subscribe</Button>
+              </Flex>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="animate__bounceInRight" animateOut="animate__bounceOutRight">
+              <Box sx={styles.checkbox}>
+                <Label htmlFor="no_spam" className={checked ? 'checked' : ''}>
+                  <Checkbox
+                    id="no_spam"
+                    onChange={handleCheckbox}
+                    defaultChecked={checked}
+                  />
+                  Don’t provide any promotional message.
+                </Label>
 
-            </Box>
+              </Box>
+            </ScrollAnimation>
           </Box>
         </Box>
       </Container>

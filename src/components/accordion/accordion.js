@@ -13,6 +13,8 @@ import {
   combineReducers,
 } from './shared';
 import { rgba } from 'polished';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 export default function Accordion({ items, ...props }) {
   return (
@@ -23,21 +25,23 @@ export default function Accordion({ items, ...props }) {
       {({ openIndexes, handleItemClick }) => (
         <Fragment>
           {items.map((item, index) => (
-            <AccordionItem
-              key={item.title}
-              isOpen={openIndexes.includes(index)}
-              className={openIndexes.includes(index) ? 'is-open' : 'is-closed'}
-            >
-              <AccordionButton onClick={() => handleItemClick(index)}>
-                <Heading as="h4">{item.title}</Heading>
-                {!openIndexes.includes(index) && (
-                  <BsArrowRight size="28px" color={rgba('#0F2137', 0.3)} />
-                )}
-              </AccordionButton>
-              <AccordionContents isOpen={openIndexes.includes(index)}>
-                {item.contents}
-              </AccordionContents>
-            </AccordionItem>
+            <ScrollAnimation animateIn="animate__jackInTheBox" animateOut="animate__jackInTheBox">
+              <AccordionItem
+                key={item.title}
+                isOpen={openIndexes.includes(index)}
+                className={openIndexes.includes(index) ? 'is-open' : 'is-closed'}
+              >
+                <AccordionButton onClick={() => handleItemClick(index)}>
+                  <Heading as="h4">{item.title}</Heading>
+                  {!openIndexes.includes(index) && (
+                    <BsArrowRight size="28px" color={rgba('#0F2137', 0.3)} />
+                  )}
+                </AccordionButton>
+                <AccordionContents isOpen={openIndexes.includes(index)}>
+                  {item.contents}
+                </AccordionContents>
+              </AccordionItem>
+            </ScrollAnimation>
           ))}
         </Fragment>
       )}

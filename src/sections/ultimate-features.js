@@ -3,6 +3,7 @@
 import { jsx, Box, Container } from "theme-ui";
 import SectionHeading from "components/section-heading";
 import Feature from "components/cards/feature";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import icon1 from "assets/images/icons/1.png";
 import icon2 from "assets/images/icons/2.png";
@@ -54,11 +55,14 @@ const UltimateFeatures = () => {
                 />
                 <Box sx={styles.features}>
                     {data?.map(item => (
-                        <Feature
-                            className="feature-item"
-                            key={item.id}
-                            data={item}
-                        />
+
+                        <ScrollAnimation animateIn="animate__jackInTheBox" animateOut="animate__rotateOut">
+                            <Feature
+                                className="feature-item"
+                                key={item.id}
+                                data={item}
+                            />
+                        </ScrollAnimation>
                     ))}
                 </Box>
             </Container>

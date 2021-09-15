@@ -72,6 +72,7 @@ const styles = {
                 backgroundColor: "white",
             },
         },
+
         ".is-sticky": {
             header: {
                 backgroundColor: "white",
