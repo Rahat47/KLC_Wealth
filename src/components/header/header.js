@@ -3,7 +3,7 @@
 import { jsx, Box, Container, Flex, Button } from "theme-ui";
 import Sticky from "react-stickynode";
 import Logo from "components/logo";
-import { NavLink } from "components/link";
+import { Link, NavLink } from "components/link";
 import { DrawerProvider } from "contexts/drawer/drawer-provider";
 import DrawerNav from "./drawer-nav";
 import menuItems from "./header.data";
@@ -36,6 +36,13 @@ export default function Header() {
                                                 />
                                             </li>
                                         ))}
+
+                                        <li >
+                                            <Link
+                                                path="/register"
+                                                label="Register"
+                                            />
+                                        </li>
                                     </Box>
                                     <Button
                                         variant="text"
