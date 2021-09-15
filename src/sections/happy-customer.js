@@ -22,8 +22,8 @@ const HappyCustomer = () => {
             <SectionHeading
               emoji={emoji}
               sx={styles.heading}
-              title="We have more than thousand of worldwide happy customer"
-              description="Coworking offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities."
+              title="Let's win together by helping other's to be successful.              "
+              description="Joining KCL WEALTH armies connects you with a world wide audience while protecting your identity. With our crowd funding program you get to earn as high as 30,000 $KCL"
             />
             <Box sx={styles.learnMore}>
               <LearnMore path="#!" />
