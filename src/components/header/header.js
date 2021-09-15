@@ -51,15 +51,22 @@ export default function Header() {
                                     <Button
                                         variant="text"
                                         sx={styles.getStartedDesktop}
+                                        onClick={() => {
+                                            window.location.href = "https://kuswap.finance/#/swap?inputCurrency=0xDb48aEa9cdF4bF01ff240973b345b16f39Efacb4"
+                                        }}
                                     >
-                                        Get Started
+                                        BUY $KCL
                                     </Button>
+
                                 </Flex>
                                 <Button
                                     variant="text"
                                     sx={styles.getStartedMobile}
+                                    onClick={() => {
+                                        window.location.href = "https://kuswap.finance/#/swap?inputCurrency=0xDb48aEa9cdF4bF01ff240973b345b16f39Efacb4"
+                                    }}
                                 >
-                                    Get Started
+                                    BUY $KCL
                                 </Button>
                                 <DrawerNav />
                             </Box>

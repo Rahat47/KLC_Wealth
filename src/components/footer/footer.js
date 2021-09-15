@@ -16,13 +16,13 @@ export default function Footer() {
             <Box sx={styles.logo}>
               <Logo />
             </Box>
-            <Box sx={styles.terms}>
+            {/* <Box sx={styles.terms}>
               <Link path="#!">Terms of use</Link>
               <Text as="span">|</Text>
               <Link path="#!">Privacy</Link>
-            </Box>
+            </Box> */}
             <Text as="p" sx={styles.copyright}>
-              Copyright by {new Date().getFullYear()} RedQ, Inc
+              Copyright by {new Date().getFullYear()} KCL Wealth
             </Text>
           </Box>
           {menuItems.map(({ id, title, items }) => (
@@ -36,15 +36,10 @@ export default function Footer() {
 
 const styles = {
   footerTopInner: {
-    gap: [30, 30, 50, '20px 50px', 17, 50],
-    display: ['grid'],
-    gridTemplateColumns: [
-      'repeat(2, 1fr)',
-      'repeat(2, 1fr)',
-      'repeat(2, 1fr)',
-      'repeat(4, 1fr)',
-      'repeat(5, 1fr)',
-    ],
+    display: ['flex'],
+    flexDirection: "column",
+    justifyContent: "center"
+
   },
   footerInner: {
     borderTop: `1px solid #D9E0E7`,
@@ -54,8 +49,10 @@ const styles = {
     padding: '35px 0 40px',
   },
   about: {
-    gridRow: ['3/4', '3/4', '1/1', '3/4', 'unset'],
-    gridColumn: ['1/3', '1/3', '1/2', '1/5', 'unset'],
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   logo: {
     textAlign: ['center', 'center', 'left', 'center'],

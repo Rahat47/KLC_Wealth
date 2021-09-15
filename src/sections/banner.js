@@ -31,22 +31,7 @@ const Banner = () => {
                                 COMMUNITY CHAIN
                             </Text>
                         </ScrollAnimation>
-                        <ScrollAnimation
-                            animateIn="animate__bounceInLeft"
-                            animateOut="animate__bounceOutDown"
-                        >
-                            <Box sx={styles.subscribe}>
-                                <Label htmlFor="email" variant="styles.srOnly">
-                                    Email
-                                </Label>
-                                <Input
-                                    id="email"
-                                    type="email"
-                                    placeholder="Enter Email address"
-                                />
-                                <Button variant="primary">Subscribe</Button>
-                            </Box>
-                        </ScrollAnimation>
+
                     </Box>
                     <ScrollAnimation
                         animateIn="animate__zoomInRight"
