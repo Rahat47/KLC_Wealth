@@ -37,11 +37,15 @@ export default function Header() {
                                             </li>
                                         ))}
 
-                                        <li >
-                                            <Link
-                                                path="/register"
-                                                label="Register"
-                                            />
+                                        <li sx={styles.navLink} >
+                                            <a
+
+                                                href="https://www.facebook.com/checkpoint/?next"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Register
+                                            </a>
                                         </li>
                                     </Box>
                                     <Button
@@ -143,6 +147,16 @@ const styles = {
         ".active": {
             color: "primary",
         },
+    },
+    navLink: {
+        marginLeft: "auto",
+
+        a: {
+            color: "secondary",
+            fontSize: 2,
+            fontWeight: "bold",
+            textDecoration: "none",
+        }
     },
     getStartedDesktop: {
         color: "primary",
