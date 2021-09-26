@@ -40,7 +40,7 @@ export default function Header() {
                                         <li sx={styles.navLink} >
                                             <a
 
-                                                href="https://www.facebook.com/checkpoint/?next"
+                                                href="https://kcclaunch.net/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >

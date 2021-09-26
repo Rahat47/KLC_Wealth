@@ -10,6 +10,8 @@ import icon2 from "assets/images/icons/2.png";
 import icon3 from "assets/images/icons/3.png";
 import icon4 from "assets/images/icons/4.png";
 import icon5 from "assets/images/icons/5.png";
+import icon6 from "assets/images/icons/6.png";
+import teamIcon from 'assets/images/icons/team.png'
 
 const data = [
     {
@@ -42,6 +44,18 @@ const data = [
         path: "#!",
         title: "Everyone wins",
     },
+    {
+        id: 6,
+        icon: teamIcon,
+        path: "#!",
+        title: "Earn 10% referral bonus up to 4th generation",
+    },
+    {
+        id: 7,
+        icon: icon6,
+        path: "#!",
+        title: "Share 10% of all kcl points purchases of your package in the pool",
+    }
 ];
 
 const UltimateFeatures = () => {

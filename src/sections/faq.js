@@ -33,6 +33,52 @@ const data = [
             </div>
         ),
     },
+    {
+        title: `Whats the 30% Tax for???`,
+        contents: (
+            <div>
+                10% IS SHARED TO ALL PARTICIPANTS IN THAT POOL AS YOUR DAILY REWARDS WHICH INCREASES AS PEOPLE BUY MORE KCL POINTS
+                <br />
+                10% IS DISTRIBUTED AS REFERAL BONUSES:
+                <br />
+                5% DIRECT REFERAL BONUS
+                <br />
+                2% REFERAL BONUS TO UPLINES DIRECT LEADER
+                <br />
+                2% REFERAL BONUS TO 3RD GENERATION UPLINE
+                <br />
+                1% REFERAL BONUS TO 4TH GENERATION UPLINE
+                <br />
+                5% SENT TO MARKETING WALLET TO PROMOTE THE PROJECT FURTHER
+                5% SENT TO ADMIN WALLET FOR DEVELOPMENT & MAINTENANCE OF THE SYSTEM
+            </div>
+        )
+    },
+    {
+        title: `Can I remove my capital anytime?`,
+        contents: (
+            <div>
+                Yes! no one has access to your funds but you as its locked in your wallet but in the blockchain.
+                Be reminded that you already got taxed 30% non-refundable and you can access the balance 70% anytime.
+            </div>
+        )
+    },
+    {
+        title: `How do you generate tokens to pay me???`,
+        contents: (
+            <div>
+                Tokens are paid to your reward or referal balance from the purchases of other users as your share on  the pool.
+            </div>
+        )
+    },
+    {
+        title: `Do I earn referrals when i invite others???`,
+        contents: (
+            <div>
+                Yes, you earn 5% of what your direct downlines buy and other bonuses from what their downlines to 4th Generation also earn.
+            </div>
+        )
+    }
 ];
 
 const FAQ = () => {
